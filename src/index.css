@@ -90,16 +90,20 @@ footer {
 
 .weather-forecast {
   margin-top: 20px;
-  text-align: center;
+  justify-content: space-around;
+  display: flex;
 }
+
 .weather-forecast-date {
-  font-size: 20px;
+  font-size: 16px;
   color: #000;
   opacity: 0.5;
+  margin-top: 10px;
 }
 
 .weather-forecast-temperature {
   font-size: 13px;
+  text-align: center;
 }
 .weather-forecast-temperature-max {
 }
