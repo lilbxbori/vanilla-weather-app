@@ -16,6 +16,7 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}m/h`;
   temperatureElement.innerHTML = Math.round(temperature);
   iconElemet.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,7 +53,15 @@ function handleSearchSubmit(Event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "487f36oead7740fff43e3a5t4ccd7b4f";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiURL).then(displayForecast);
+  console.log(apiURL);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   //   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
   let forecastHTML = "";
@@ -82,4 +91,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("San Juan");
-displayForecast();
