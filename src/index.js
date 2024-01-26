@@ -11,7 +11,7 @@ function refreshWeather(response) {
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
-  descriptionElement.innerHTML = response.data.condition.description;
+  descriptionElement.innerHTML = `${response.data.condition.description}`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}m/h`;
   temperatureElement.innerHTML = Math.round(temperature);
@@ -37,7 +37,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day} Time: ${hours}:${minutes}`;
 }
 
 function searchCity(city) {

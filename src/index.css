@@ -1,10 +1,13 @@
 body {
-  /* background: rgba(241, 93, 132, 0.6); */
-  background: linear-gradient(to right, #868f96 0%, #596164 100%);
+  background: linear-gradient(to right, rgb(238, 156, 167), rgb(255, 221, 225));
   font-family: "Roboto", sans-serif;
 }
 .weather-app {
-  background: white;
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
   max-width: 600px;
   margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
@@ -22,21 +25,22 @@ a {
 }
 
 .search-form-input {
-  background: #e8f0fe;
+  background: #ef9fa9;
   border: none;
   border-radius: 6px;
   width: 80%;
   font-size: 16px;
   padding: 15px 20px;
 }
+
 .search-form-button {
-  background: rgba(241, 93, 132);
+  background: #ef9fa9;
   padding: 15px 30px;
   border: none;
-  font-size: 16p;
+  font-size: 16px;
   border-radius: 6px;
   margin-left: 5px;
-  color: white;
+  color: #e6edf1;
 }
 
 .weather-app-data {
@@ -45,8 +49,10 @@ a {
 }
 .weather-app-city {
   margin: 0;
-  font-size: 38px;
+  font-size: 60px;
   line-height: 48px;
+  padding: 10px 0;
+  font-family: "Agbalumo", system-ui;
 }
 
 .weather-app-details {
@@ -60,24 +66,27 @@ a {
 }
 
 .weather-app-tempearture main {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .weather-app-temperature-container {
   display: flex;
 }
 .weather-app-icon {
-  width: 88px;
-  height: 88px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
 }
 .weather-app-temperature {
   font-size: 88px;
   font-weight: bold;
   line-height: 88px;
+  padding: 5px 0;
 }
 .weather-app-unit {
   margin-top: 6px;
   font-size: 28px;
+  padding: 5px 0;
 }
 footer {
   border-top: 1px solid rgba(241, 93, 132, 0.4);
@@ -97,14 +106,15 @@ footer {
 .weather-forecast-date {
   text-align: center;
   font-size: 16px;
-  color: #000;
+  color: black;
   line-height: 20px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .weather-forecast-icon {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   display: block;
 }
@@ -115,10 +125,11 @@ footer {
   display: flex;
   justify-content: center;
   color: #f65282;
+  margin-bottom: 15px;
 }
 
 .weather-forecast-temperature {
-  padding: 0 10px;
+  padding: 0 10px 0;
 }
 
 .weather-forecast-temperature-max {
